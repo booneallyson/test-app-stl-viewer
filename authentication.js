@@ -32,11 +32,9 @@ function init() {
     function(accessToken, refreshToken, profile, done) {
       // asynchronous verification, for effect...
       process.nextTick(function () {
-        console.log("hello")
 
         profile.accessToken = accessToken;
         profile.refreshToken = refreshToken;
-        console.log(profile.accessToken)
 
         // To keep the example simple, the user's Onshape profile is returned to
         // represent the logged-in user.  In a typical application, you would want
@@ -52,7 +50,6 @@ function onOAuthTokenReceived(body, req) {
   var jsonResponse;
   jsonResponse = JSON.parse(body);
   if (jsonResponse) {
-    print("hello2")
     print(jsonResponse.access_token)
     req.user.accessToken = jsonResponse.access_token;
     req.user.refreshToken = jsonResponse.refresh_token;
