@@ -25,9 +25,9 @@ function init() {
      clientID: oauthClientId,
      clientSecret: oauthClientSecret,
      callbackURL: "https://mighty-bayou-88762.herokuapp.com/oauthRedirect",
-      authorizationURL: "https://oauth.onshape.com/oauth/authorize",
-      tokenURL: "https://oauth.onshape.com/oauth/token",
-      userProfileURL: "https://cad.onshape.com/api/users/current"
+     authorizationURL: "https://oauth.onshape.com/oauth/authorize",
+     tokenURL: "https://oauth.onshape.com/oauth/token",
+     userProfileURL: "https://cad.onshape.com/api/users/current"
     },
     function(accessToken, refreshToken, profile, done) {
       // asynchronous verification, for effect...
