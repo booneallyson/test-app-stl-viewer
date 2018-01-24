@@ -100,8 +100,8 @@ var getPartsList = function(req, res) {
 
 var getStl = function(req, res) {
   var url;
-  print("helloooooo")
-  print(req.query.partId)
+  console.log("helloooooo")
+  console.log(req.query.partId)
   if (req.query.partId != null) {
     url = 'https://cad.onshape.com/api/parts/d/' + req.query.documentId +
     '/w/' + req.query.workspaceId + '/e/' + req.query.stlElementId +'/partid/'+ req.query.partId + '/stl/' +
