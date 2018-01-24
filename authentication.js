@@ -32,6 +32,9 @@ function init() {
     function(accessToken, refreshToken, profile, done) {
       // asynchronous verification, for effect...
       process.nextTick(function () {
+        console.log("hello")
+        console.log(accessToken)
+        console.log(profile.accessToken)
 
         profile.accessToken = accessToken;
         profile.refreshToken = refreshToken;
