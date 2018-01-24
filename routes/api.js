@@ -131,6 +131,7 @@ var getStl = function(req, res) {
   }).catch(function(data) {
     if (data.statusCode === 401) {
       authentication.refreshOAuthToken(req, res).then(function() {
+        print("authentication is failing")
         getStl(req, res);
       }).catch(function(err) {
         console.log('Error refreshing token or getting elements: ', err);
