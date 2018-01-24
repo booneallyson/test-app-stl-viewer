@@ -21,11 +21,10 @@ function init() {
     done(null, obj);
   });
 
-  passport.use(new OnshapeStrategy({
-      clientID: oauthClientId,
-      clientSecret: oauthClientSecret,
-      // Replace the callbackURL string with your own deployed servers path to handle the OAuth redirect
-      callbackURL: "https://onshape-app-stl.herokuapp.com/oauthRedirect",
+    passport.use(new OnshapeStrategy({
+     clientID: oauthClientId,
+     clientSecret: oauthClientSecret,
+     callbackURL: "https://mighty-bayou-88762.herokuapp.com/",
       authorizationURL: "https://oauth.onshape.com/oauth/authorize",
       tokenURL: "https://oauth.onshape.com/oauth/token",
       userProfileURL: "https://cad.onshape.com/api/users/current"
