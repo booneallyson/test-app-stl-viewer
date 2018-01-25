@@ -7,12 +7,12 @@ exports.renderPage = function(req, res) {
 
 function callback(req, res, success, data) {
   if (!success) {
-    print("not successful")
-    print(req.query.partId)
+    console.log("not successful")
+    console.log(req.query.partId)
     var search = url.parse(req.url).search;
     res.status(404);
     return res.send();
   }
-  print("successful")
+  console.log("successful")
   res.send(data);
 }
