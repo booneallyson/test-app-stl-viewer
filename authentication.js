@@ -50,6 +50,7 @@ function onOAuthTokenReceived(body, req) {
   var jsonResponse;
   jsonResponse = JSON.parse(body);
   if (jsonResponse) {
+    console.log("json response")
     console.log(jsonResponse.access_token)
     req.user.accessToken = jsonResponse.access_token;
     req.user.refreshToken = jsonResponse.refresh_token;
