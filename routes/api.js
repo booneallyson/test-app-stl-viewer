@@ -115,7 +115,7 @@ var getStl = function(req, res) {
     // '/w/' + req.query.workspaceId + '/e/' + req.query.elementId + '/stl' +
     // '?mode=' + 'text'  +
     // '&scale=1&units=inch';
-    url = "https://cad.onshape.com/api/parts/d/6eb6949dcb6636f637b99d1f/w/ee76f1dc366e3919f2fe06c5/e/438f51e56a79c5379c8f235c/partid/JFD/stl/?mode=text&scale=1&units=inch"
+    url = "https://cad.onshape.com/api/partstudios/d/6eb6949dcb6636f637b99d1f/w/ee76f1dc366e3919f2fe06c5/e/8fb18477e1ad8cc3bf294351/stl?grouping=true&scale=1.0&units=inch"
     console.log("** STL for partId " + req.query.partId);
   }
 
