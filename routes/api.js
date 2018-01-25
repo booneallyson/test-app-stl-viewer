@@ -102,6 +102,7 @@ var getStl = function(req, res) {
   var url;
   console.log("helloooooo")
   console.log(req.query.partId)
+  console.log(req.query)
   if (req.query.partId != null) {
     url = 'https://cad.onshape.com/api/parts/d/' + req.query.documentId +
     '/w/' + req.query.workspaceId + '/e/' + req.query.stlElementId +'/partid/'+ req.query.partId + '/stl/' +
@@ -120,7 +121,8 @@ var getStl = function(req, res) {
   if (req.query.angleTolerance !== '' && req.query.chordTolerance !== '') {
     url += '&angleTolerance=' + req.query.angleTolerance +'&chordTolerance=' + req.query.chordTolerance;
   }
-
+  print("url: ")
+  print(url)
   request.get({
     uri: url,
     headers: {
@@ -131,7 +133,6 @@ var getStl = function(req, res) {
   }).catch(function(data) {
     if (data.statusCode === 401) {
       authentication.refreshOAuthToken(req, res).then(function() {
-        print("authentication is failing")
         getStl(req, res);
       }).catch(function(err) {
         console.log('Error refreshing token or getting elements: ', err);
