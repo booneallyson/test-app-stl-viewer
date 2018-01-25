@@ -100,7 +100,7 @@ var getPartsList = function(req, res) {
 
 var getStl = function(req, res) {
   var url;
-  console.log("helloooooo")
+  console.log("hello")
   console.log(req.query.partId)
   console.log(req.query)
   if (req.query.partId != null) {
@@ -148,7 +148,6 @@ var getStl = function(req, res) {
 
 router.get('/documents', getDocuments);
 router.get('/elements', getElementList);
-console.log("getting stl from here")
 router.get('/stl', getStl);
 router.get('/parts', getPartsList);
 
