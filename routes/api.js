@@ -135,6 +135,7 @@ var getStl = function(req, res) {
     if (data.statusCode === 401) {
       console.log("in here")
       authentication.refreshOAuthToken(req, res).then(function() {
+        console.log("getting stl")
         getStl(req, res);
       }).catch(function(err) {
         console.log('Error refreshing token or getting elements: ', err);
@@ -147,6 +148,7 @@ var getStl = function(req, res) {
 
 router.get('/documents', getDocuments);
 router.get('/elements', getElementList);
+console.log("getting stl from here")
 router.get('/stl', getStl);
 router.get('/parts', getPartsList);
 
