@@ -121,8 +121,8 @@ var getStl = function(req, res) {
   if (req.query.angleTolerance !== '' && req.query.chordTolerance !== '') {
     url += '&angleTolerance=' + req.query.angleTolerance +'&chordTolerance=' + req.query.chordTolerance;
   }
-  print("url: ")
-  print(url)
+  console.log("url: ")
+  console.log(url)
   request.get({
     uri: url,
     headers: {
