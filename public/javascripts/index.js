@@ -300,9 +300,8 @@
             var partId = data[i]["partId"];
             console.log("stl element id")
             console.log(data[i]["elementId"])
-            //var href = "/" + window.location.search + "&stlElementId=" +
-              //  elementId + "&partId=" + partId;
-              var href = "https://cad.onshape.com/api/parts/d/6eb6949dcb6636f637b99d1f/w/ee76f1dc366e3919f2fe06c5/e/438f51e56a79c5379c8f235c/partid/JFD/stl/?mode=text&scale=1&units=inch&angleTolerance=-1&chordTolerance=-1"
+            var href = "/" + window.location.search + "&stlElementId=" +
+                elementId + "&partId=" + partId;
             $("#elt-select2")
                 .append(
                 "<option href='" + href + "'>" + "Part -" + data[i].name + "</option>"
