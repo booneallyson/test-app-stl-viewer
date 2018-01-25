@@ -7,7 +7,7 @@ exports.renderPage = function(req, res) {
 
 function callback(req, res, success, data) {
   if (!success) {
-    print("hello")
+    print("hello2")
     print(req.query.partId)
     var search = url.parse(req.url).search;
     res.status(404);
