@@ -295,7 +295,7 @@
         for (var i = 0; i < data.length; ++i) {
             var elementId = data[i]["elementId"];
             console.log("in index.js")
-            console.log(data[i])
+            console.log(data[i]["partId"])
             var partId = data[i]["partId"];
             var href = "/" + window.location.search + "&stlElementId=" +
                 elementId + "&partId=" + partId;
