@@ -298,6 +298,8 @@
             console.log("in index.js")
             console.log(data[i]["partId"])
             var partId = data[i]["partId"];
+            console.log("stl element id")
+            console.log(data[i]["stlElementId"])
             var href = "/" + window.location.search + "&stlElementId=" +
                 elementId + "&partId=" + partId;
             $("#elt-select2")
