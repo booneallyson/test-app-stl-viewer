@@ -300,12 +300,12 @@
             var partId = data[i]["partId"];
             console.log("stl element id")
             console.log(data[i]["elementId"])
-            //var href = "/" + window.location.search + "&stlElementId=" +
-              //  elementId + "&partId=" + partId;
-            //$("#elt-select2")
-              //  .append(
-               // "<option href='" + href + "'>" + "Part -" + data[i].name + "</option>"
-           // )
+            var href = "/" + window.location.search + "&stlElementId=" +
+                elementId + "&partId=" + partId;
+            $("#elt-select2")
+                .append(
+                "<option href='" + href + "'>" + "Part -" + data[i].name + "</option>"
+            )
 
         }
 
