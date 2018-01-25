@@ -240,6 +240,7 @@
             dataType: 'json',
             type: 'GET',
             success: function(data) {
+                console.log("getting parts was successful")
                 addParts(data, dfd, elementsDict);
             },
             error: function() {
@@ -305,8 +306,7 @@
             )
 
         }
-        console.log("data")
-        console.log(dfd);
+
         dfd.resolve();
     }
 
