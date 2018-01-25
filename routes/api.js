@@ -105,7 +105,7 @@ var getStl = function(req, res) {
   console.log(req.query)
   if (req.query.partId != null) {
     url = 'https://cad.onshape.com/api/parts/d/' + req.query.documentId +
-    '/w/' + req.query.workspaceId + '/e/' + req.query.elementId +'/partid/'+ req.query.partId + '/stl/' +
+    '/w/' + req.query.workspaceId + '/e/' + req.query.elementId +'/partid/'+ req.query.partId + '/stl' +
     '?mode=' + 'text'  +
     '&scale=1&units=inch';
     console.log("** STL for partId " + req.query.partId);
