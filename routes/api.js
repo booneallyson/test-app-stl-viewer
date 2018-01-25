@@ -121,22 +121,17 @@ var getStl = function(req, res) {
  if (req.query.angleTolerance !== '' && req.query.chordTolerance !== '') {
     url += '&angleTolerance=' + req.query.angleTolerance +'&chordTolerance=' + req.query.chordTolerance;
   }
-  console.log("url: ")
-  console.log(url)
-  console.log(req.user.accessToken)
+
   request.get({
     uri: url,
     headers: {
       'Authorization': 'Bearer ' + req.user.accessToken
     }
   }).then(function(data) {
-    console.log("data")
     res.send(data);
   }).catch(function(data) {
     if (data.statusCode === 401) {
-      console.log("in here")
       authentication.refreshOAuthToken(req, res).then(function() {
-        console.log("getting stl")
         getStl(req, res);
       }).catch(function(err) {
         console.log('Error refreshing token or getting elements: ', err);
