@@ -305,7 +305,7 @@
             )
 
         }
-
+        console.log(dfd);
         dfd.resolve();
     }
 
