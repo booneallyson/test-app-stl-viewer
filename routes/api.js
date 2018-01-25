@@ -114,14 +114,13 @@ var getStl = function(req, res) {
     url = 'https://cad.onshape.com/api/partstudios/d/' + req.query.documentId +
         '/w/' + req.query.workspaceId + '/e/' + '8fb18477e1ad8cc3bf294351/stl' + //req.query.elementId + '/stl' +
         '?grouping=true&scale=1.0&units=inch';
-
     // url = "https://cad.onshape.com/api/partstudios/d/6eb6949dcb6636f637b99d1f/w/ee76f1dc366e3919f2fe06c5/e/8fb18477e1ad8cc3bf294351/stl?grouping=true&scale=1.0&units=inch"
     console.log("** STL for partId " + req.query.partId);
   }
 
- if (req.query.angleTolerance !== '' && req.query.chordTolerance !== '') {
-    url += '&angleTolerance=' + req.query.angleTolerance +'&chordTolerance=' + req.query.chordTolerance;
-  }
+ //if (req.query.angleTolerance !== '' && req.query.chordTolerance !== '') {
+ //   url += '&angleTolerance=' + req.query.angleTolerance +'&chordTolerance=' + req.query.chordTolerance;
+ // }
   console.log("url: ")
   console.log(url)
   console.log(req.user.accessToken)
