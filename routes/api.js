@@ -123,6 +123,7 @@ var getStl = function(req, res) {
   }
   console.log("url: ")
   console.log(url)
+  console.log(req.user.accessToken)
   request.get({
     uri: url,
     headers: {
@@ -132,6 +133,7 @@ var getStl = function(req, res) {
     res.send(data);
   }).catch(function(data) {
     if (data.statusCode === 401) {
+      console.log("in here")
       authentication.refreshOAuthToken(req, res).then(function() {
         getStl(req, res);
       }).catch(function(err) {
